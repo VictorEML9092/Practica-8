@@ -12,15 +12,17 @@ class Colas:
         self.Cola_Suma = [] # Tercer cola para sumar los elementos de las dos primeras colas
 
     def suma_colas(self): # Método para sumar las colas
-        print("\nLa primera Cola es:",self.Cola1) # Se imprime la primer cola
-        print("La segundo Cola es:",self.Cola2) # Se imprime la segunda cola
+        self.i = 0
         while self.Cola1 and self.Cola2:  # Se ejecuta hasta que ambas colas estén vacías
-            self.Cola_Suma.append(self.Cola1[0] + self.Cola2[0])  # Sumar y agregar los primeros elementos de cada cola
+            self.Cola_Suma.append(self.Cola1[0] + self.Cola2[0])  # Sumar y los primeros elementos de cada cola
+            print(f"\n[{self.Cola1[0]}]","+",f"[{self.Cola2[0]}]","=",f"[{self.Cola_Suma[self.i]}]") # Se imprime la suma de casa elemento
+            self.i += 1
             # Eliminar el primer elemento de cada cola
             self.Cola1.remove(self.Cola1[0])
             self.Cola2.remove(self.Cola2[0])
-        print("\nLa suma de cada elemento de la primera y segunda cola es:",self.Cola_Suma) # Se imprime la tercer cola
-
+            print("La cola 1 es:",self.Cola1) # Se imprime como va quedando la cola 1
+            print("La cola 2 es:",self.Cola2) # Se imprime como va quedando la cola 2
+            
 Cola = Colas() # Se crea el objeto de la clase Colas
 
 cantidad = int(input("Ingrese la cantidad de elementos que tendran las dos colas: ")) # Se pide la cantidad de elementos para cada cola
