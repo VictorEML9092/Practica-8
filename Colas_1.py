@@ -18,8 +18,8 @@ class Colas:
             print(f"\n[{self.Cola1[0]}]","+",f"[{self.Cola2[0]}]","=",f"[{self.Cola_Suma[self.i]}]") # Se imprime la suma de casa elemento
             self.i += 1
             # Eliminar el primer elemento de cada cola
-            self.Cola1.remove(self.Cola1[0])
-            self.Cola2.remove(self.Cola2[0])
+            self.Cola1.pop(0)
+            self.Cola2.pop(0)
             print("La cola 1 es:",self.Cola1) # Se imprime como va quedando la cola 1
             print("La cola 2 es:",self.Cola2) # Se imprime como va quedando la cola 2
             
