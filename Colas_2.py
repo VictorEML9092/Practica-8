@@ -11,7 +11,8 @@ class Cola: # Se crea la clase base Cola
     def dar_turno(self): # Método para dar los turnos
         self.servicio = input("\nIngrese su número de servicio con 3 dígitos sin contar la letra C (C104): ")
         self.Servicios.append(self.servicio) # Se agregan los números de servicio a la cola
-        print(f"Su número de atención es: {self.Turnos[i]}") # Se imprime el turno para el cliente
+        print(f"Su número de atención es: {self.Turnos[0]}") # Se imprime el turno para el cliente
+        self.Turnos.pop(0) # Se elimina de la cola el turno que se le dio al cliente
 
     def atender_cliente(self):
         print("\nLos números de servicios son:") # Se imprimen los números de servicio
